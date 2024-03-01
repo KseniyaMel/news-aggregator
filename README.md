@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# News Aggregator Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the News Aggregator Web App project! This project is a front-end implementation of a news aggregator website that pulls articles from various sources and allows users to customize their news feed.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **Article Search and Filtering**: Users can search for articles by keyword and filter the results by date, category, and source.
 
-### `npm start`
+2. **Personalized News Feed**: Users can customize their news feed by selecting preferred sources and categories.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Mobile-Responsive Design**: The website is optimized for viewing on mobile devices for a seamless user experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Data Sources
 
-### `npm test`
+For this project, we have integrated articles from three data sources:
+- [News API](https://newsapi.org/)
+- [The Guardian API](https://open-platform.theguardian.com/documentation/)
+- [New York Times API](https://developer.nytimes.com/apis)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- React.js
+- Redux for state management
+- Ant Design for UI components
+- Axios for API requests
+- Moment.js for date manipulation
+- Docker for containerization
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the project locally, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository to your local machine:
 
-### `npm run eject`
+    ```
+    git clone https://github.com/KseniyaMel/news-aggregator
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Navigate to the project directory:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```
+    cd news-aggregator-web-app
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```
+    npm install
+    ```
 
-## Learn More
+4. Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```
+    npm start
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Access the application in your web browser at [http://localhost:3000](http://localhost:3000)
 
-### Code Splitting
+## Containerization with Docker
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To containerize the application using Docker, ensure that Docker is installed on your system. Then, follow these steps:
 
-### Analyzing the Bundle Size
+1. Build the Docker image:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    ```
+    docker build -t news-aggregator-app .
+    ```
 
-### Making a Progressive Web App
+2. Run the Docker container:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    ```
+    docker run -d -p 3000:3000 news-aggregator-app
+    ```
 
-### Advanced Configuration
+3. Access the application in your web browser at [http://localhost:3000](http://localhost:3000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Additional Notes
 
-### Deployment
+- Feel free to customize the project as per your requirements or add additional features.
+- If you encounter any issues or have any questions, please feel free to reach out to the project maintainers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy coding! 🚀
