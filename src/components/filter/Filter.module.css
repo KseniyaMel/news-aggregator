@@ -1,0 +1,16 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  max-width: 300px;
+  padding: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 10px;
+}
