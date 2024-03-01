@@ -18,8 +18,8 @@ const Filter: React.FC = () => {
       content={<FilterOptions handleClose={handleClose} />}
       title="Filter"
       trigger="click"
-      visible={isOpen}
-      onVisibleChange={handleOpen}
+      open={isOpen}
+      onOpenChange={handleOpen}
       overlayStyle={{ minWidth: '250px' }}
     >
       <Button type="primary">Filter</Button>

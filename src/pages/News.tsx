@@ -7,24 +7,22 @@ import { resetPage } from '../strore/articles/articles.slices';
 import debounce from '../utils/debounce';
 import { getFilter, getPage } from '../strore/articles/articles.selectors';
 
+const debouncedUpdateFeed = debounce((dispatch: any) => dispatch(fetchArticlesAction()), 1500);
+
 const News: React.FC = () => {
   const filter = useAppSelector(getFilter);
   const page = useAppSelector(getPage);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    const updateFeed = () => {
-      dispatch(resetPage());
-      dispatch(fetchArticlesAction());
-    }
-    debounce(updateFeed)();
+    dispatch(resetPage());
+    debouncedUpdateFeed(dispatch);
   }, [dispatch, filter])
 
   useEffect(() => {
-    const updateFeed = () => {
+    if (page !== 1) {
       dispatch(fetchArticlesAction());
     }
-    updateFeed();
   }, [dispatch, page]);
 
   return (

@@ -1,9 +1,13 @@
-FROM node:18-alpine as build
-ARG SERVER_URL
+FROM node:14-alpine
+
 WORKDIR /app
-ENV PATH /app/node_modules/.bin:$PATH
-COPY *.json *.lock ./
-RUN npm i react-scripts@latest
+
+COPY package.json package-lock.json ./
+
+RUN npm install
+
 COPY . .
+
 EXPOSE 3000
+
 CMD ["npm", "start"]

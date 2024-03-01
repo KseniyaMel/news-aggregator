@@ -20,7 +20,7 @@ const NewsFeed: React.FC = () => {
       <div className={styles.feed}>
         {articles.length === 0 && !isLoading && 'No data'}
         {articles.map((a) => (
-          <Article article={a} key={a.title} />
+          <Article article={a} key={`${a.title}${a.publishedAt}`} />
         ))}
       </div>
       <div className={styles.footer}>
